@@ -1,0 +1,44 @@
+svg {
+  height: auto;
+  width: 30%;
+}
+
+.pie-crust {
+  animation: bake-pie-crust 10s 0s infinite;
+}
+
+@keyframes bake-pie-crust {
+  0% {fill: #f8edc4;}
+  50% {fill: #F2DC8E;}
+  80% {fill: #edd168;}
+  100% {fill: #debd45;}
+}
+
+.pie-slit.first {
+  stroke-width: 4px;
+  animation: bake-pie-slit 10s 0s infinite, widen-slit1 10s 0s infinite;
+}
+
+.pie-slit.second {
+  stroke-width: 6px;
+  animation: bake-pie-slit 10s 0s infinite, widen-slit2 10s 0s infinite;
+}
+
+@keyframes bake-pie-slit {
+  0% {stroke: #f8edc4;}
+  50% {stroke: #ae567b;}
+  80% {stroke: #805064;}
+  100% {stroke: #5b434d;}
+}
+
+@keyframes widen-slit1 {
+  0% {stroke-width: 0;}
+  50% {stroke-width 1px;}
+  100% {stroke-width: 4px;}
+}
+
+@keyframes widen-slit2 {
+  0% {stroke-width: 0;}
+  50% {stroke-width 1px;}
+  100% {stroke-width: 6px;}
+}

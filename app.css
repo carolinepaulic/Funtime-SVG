@@ -3,15 +3,38 @@ svg {
   width: 30%;
 }
 
-.pie-crust {
-  animation: bake-pie-crust 10s 0s infinite;
+#top-crust-wrapper {
+  animation: bake-pie-crust-size2 10s 0s infinite;
 }
 
-@keyframes bake-pie-crust {
+.pie-crust, #top-crust-wrapper{
+  transform-origin: center center;
+}
+
+.pie-crust.top {
+  animation: bake-pie-crust-color 10s 0s infinite;
+}
+
+.pie-crust.bottom {
+  animation: bake-pie-crust-size1 10s 0s infinite, bake-pie-crust-color 10s 0s infinite;
+}
+
+@keyframes bake-pie-crust-color {
   0% {fill: #f8edc4;}
   50% {fill: #F2DC8E;}
   80% {fill: #edd168;}
   100% {fill: #debd45;}
+}
+
+@keyframes bake-pie-crust-size1 {
+  0% {transform: scale(.97);}
+  100% {transform: scale(1);}
+}
+
+@keyframes bake-pie-crust-size2 {
+  0% {transform: scale(.8, .6);}
+  50% {transform: scale(.9, .9);}
+  100% {transform: scale(1, 1);}
 }
 
 .pie-slit.first {
